@@ -1,0 +1,27 @@
+package desafio2;
+import javax.swing.JOptionPane;
+public class Desafio2 {
+
+	public static void main(String[] args) {
+	
+	int amigos[]= new int[7];
+	int pacote1 = 4;
+	int pacote2 = 2;
+	int pacote3 = 2;
+	int pacote4 = 1;
+	int pacote5 = 5;
+	int escolha = 0;
+	
+	String[] listaItems = {"500g Carne","500g Tulipa","500g Linguiça", "1Kg Farofa ","1L Refrigerante"};
+	for(int i = 0; i<amigos.length; i++) {
+		escolha =JOptionPane.showOptionDialog(null, "Escolha dois itens:", "Churrasco", 0, 
+				JOptionPane.QUESTION_MESSAGE, null, listaItems, listaItems[1]);
+				System.out.println(escolha);
+	} 
+		
+	
+	
+			
+	}
+
+}

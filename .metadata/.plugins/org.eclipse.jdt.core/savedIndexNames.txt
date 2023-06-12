@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\Documentos Local D\Demirrilson 11\wsEtec\.metadata\.plugins\org.eclipse.jdt.core
+562504340.index
+707663153.index
+1865797976.index

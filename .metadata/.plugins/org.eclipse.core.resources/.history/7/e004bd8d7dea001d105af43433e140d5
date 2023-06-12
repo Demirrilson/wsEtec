@@ -1,0 +1,28 @@
+package listaK;
+
+public class K10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*Desenvolva um programa para calcular a soma de todos os numero impares de 0 à 20 
+		 * e a multiplicação de todos os números pares de 0 à 20.*/
+
+		int multiplo=0, soma=0, contador=0;
+		do {
+			contador++;
+			if ((contador%2)!= 0) {
+				soma=soma+contador;
+				System.out.println("soma= "soma+"   -  "+contador);
+			}
+			if ((contador%2)== 0) {
+				multiplo = multiplo*contador;
+				System.out.println("multiplicação= "multiplo+"   -  "+contador);
+			}
+			
+		} while (contador <20);
+		System.out.println(soma);
+		System.out.println(multiplo);
+		
+	}
+
+}

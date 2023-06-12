@@ -1,0 +1,25 @@
+package listaJ;
+
+public class J1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int contador =200 , contagem = 0;
+		
+		while (contador >1) {
+			if (contador >100) {
+				contagem = contagem +1;
+				System.out.println(contagem);
+			}else {
+				contagem = contagem -1;
+				System.out.println(contagem);
+			}
+			
+			contador = contador -1;
+			
+		}
+
+	}
+
+}

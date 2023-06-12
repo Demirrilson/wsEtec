@@ -1,0 +1,103 @@
+package desafio2;
+import javax.swing.JOptionPane;
+public class Desafio2 {
+
+	public static void main(String[] args) {
+	
+	int amigos[]= new int[7];
+	int pacote1 = 4;
+	int pacote2 = 2;
+	int pacote3 = 2;
+	int pacote4 = 1;
+	int pacote5 = 5;
+	int escolha = 0;
+	
+	String[] listaItems = {"500g Carne","500g Tulipa","500g Linguiça", "1Kg Farofa ","1L Refrigerante"};
+	
+	
+	for(int i = 0; i<amigos.length; i++) {
+		
+		
+		int cont = 0;
+		
+		
+		do {
+			JOptionPane.showMessageDialog(null,
+					amigos[cont],"Alerta", JOptionPane.PLAIN_MESSAGE);
+			
+			escolha =JOptionPane.showOptionDialog(null, "Escolha dois itens:", "Churrasco", 0, 
+					JOptionPane.QUESTION_MESSAGE, null, listaItems, listaItems[1]);
+					
+					if (escolha==0) {
+						
+						if(pacote1==0) {
+						while(escolha==0) {
+							JOptionPane.showMessageDialog(null,
+									"Item esgotado","Alerta", JOptionPane.PLAIN_MESSAGE);
+							escolha =JOptionPane.showOptionDialog(null, "Escolha dois itens:", "Churrasco", 0, 
+									JOptionPane.QUESTION_MESSAGE, null, listaItems, listaItems[1]);
+						}
+					}
+						pacote1--;
+						}
+					if (escolha==1) {
+						
+						if(pacote2==0) {
+						while(escolha==1) {
+							JOptionPane.showMessageDialog(null,
+									"Item esgotado","Alerta", JOptionPane.PLAIN_MESSAGE);
+							escolha =JOptionPane.showOptionDialog(null, "Escolha dois itens:", "Churrasco", 0, 
+									JOptionPane.QUESTION_MESSAGE, null, listaItems, listaItems[1]);
+						}
+					}
+						pacote2--;
+					}
+					if (escolha==2) {
+						
+						if(pacote3==0) {
+						while(escolha==2) {
+							JOptionPane.showMessageDialog(null,
+									"Item esgotado","Alerta", JOptionPane.PLAIN_MESSAGE);
+							escolha =JOptionPane.showOptionDialog(null, "Escolha dois itens:", "Churrasco", 0, 
+									JOptionPane.QUESTION_MESSAGE, null, listaItems, listaItems[1]);
+						}
+					}
+						pacote3--;
+					}
+					if (escolha==3) {
+						
+						if(pacote4==0) {
+						while(escolha==3) {
+							JOptionPane.showMessageDialog(null,
+									"Item esgotado","Alerta", JOptionPane.PLAIN_MESSAGE);
+							escolha =JOptionPane.showOptionDialog(null, "Escolha dois itens:", "Churrasco", 0, 
+									JOptionPane.QUESTION_MESSAGE, null, listaItems, listaItems[1]);
+						}
+					}
+						pacote4--;
+					}
+					if (escolha==4) {
+						
+						if(pacote5==0) {
+						while(escolha==4) {
+							JOptionPane.showMessageDialog(null,
+									"Item esgotado","Alerta", JOptionPane.PLAIN_MESSAGE);
+							escolha =JOptionPane.showOptionDialog(null, "Escolha dois itens:", "Churrasco", 0, 
+									JOptionPane.QUESTION_MESSAGE, null, listaItems, listaItems[1]);
+						}
+					}
+						pacote5--;
+					}
+					cont++;
+					System.out.println(cont);
+		}while(cont<2);
+		
+		
+	} 
+		
+	
+	
+			
+	}
+
+}
