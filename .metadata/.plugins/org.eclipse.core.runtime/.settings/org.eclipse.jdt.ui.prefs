@@ -16,6 +16,7 @@ content_assist_prefix_completion=true
 content_assist_show_visible_proposals=true
 content_assist_sorter=org.eclipse.jdt.ui.RelevanceSorter
 eclipse.preferences.version=1
+markOccurrences=false
 org.eclipse.jdt.ui.formatterprofiles.version=22
 org.eclipse.jdt.ui.text.code_templates_migrated=true
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
