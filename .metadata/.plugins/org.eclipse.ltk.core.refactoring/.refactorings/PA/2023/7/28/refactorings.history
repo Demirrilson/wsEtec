@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;listaK.k10.java&apos; to &apos;K10.java&apos;&#x0D;&#x0A;- Original project: &apos;PA&apos;&#x0D;&#x0A;- Original element: &apos;listaK.k10.java&apos;&#x0D;&#x0A;- Renamed element: &apos;listaK.K10.java&apos;" description="Rename compilation unit &apos;k10.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;listaK{k10.java" name="K10.java" references="false" stamp="1689157430601" version="1.0"/>
+</session>

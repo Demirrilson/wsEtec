@@ -1,0 +1,59 @@
+package udemyJava;
+
+import java.util.Scanner;
+
+public class Secao08Ex15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double a=0, b=0, c=0;
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.println("\n Verificação de Triângulos \n\n");
+		do {
+			System.out.println("Digite o valor do 1º lado:");
+			a = teclado.nextDouble();
+		} while (a<1);
+		do {
+			System.out.println("Digite o valor do 2º lado:");
+			b = teclado.nextDouble();
+		} while (b<1);
+		do {
+			System.out.println("Digite o valor do 3º lado:");
+			c = teclado.nextDouble();
+		} while (c<1);
+		
+		System.out.println(a+"-"+b+"-"+c);
+		
+		teclado.close();
+		
+		
+		System.out.println(verificarLados(a, b, c));
+
+	}
+
+	private static Boolean verificarLados(double a, double b, double c) {
+		int verificador=0;
+		
+		if (a>(b+c)) {
+			verificador=1;
+		}
+		if (b>(a+c)) {
+			verificador=1;
+		}
+		if (c>(b+a)) {
+			verificador=1;
+		}
+		if (verificador == 1) {
+			
+			return false;
+		}
+		else {
+		return (Boolean) true;
+		}
+		
+	}
+
+}

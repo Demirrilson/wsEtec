@@ -1,0 +1,22 @@
+package udemyJava;
+
+import java.util.Scanner;
+
+public class Secao08Ex02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int dia, mes, ano;
+		String mesTexto, dataTexto;
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Digite o dia desejado:");
+		dia = teclado.nextInt();
+		
+		
+		System.out.println(dia);
+
+	}
+
+}

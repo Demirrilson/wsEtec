@@ -1,0 +1,56 @@
+package udemyJava;
+
+import java.util.Scanner;
+
+public class Secao08Ex02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int dia, mes, ano;
+		String mesTexto, dataTexto;
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Digite o Dia desejado:");
+		dia = teclado.nextInt();
+		
+		System.out.println("Digite o Mês desejado:");
+		mes = teclado.nextInt();
+		
+		System.out.println("Digite o Ano desejado:");
+		ano = teclado.nextInt();
+		
+		while (mes>12) {
+			System.out.println("\nMês invalido!!!");
+			System.out.println("\nDigite o Mês desejado:");
+			mes = teclado.nextInt();
+		}
+		int condicao=0;
+		while (condicao == 0) {
+			if (mes==1||mes ==3||mes==5||mes==7||mes==8||mes==10||mes==12 ) {
+				if (dia<=31) {
+					condicao=1;
+					System.out.println("ok");
+				}
+			}
+			if (mes==4||mes ==6||mes==9||mes==11 ) {
+				if (dia<=30) {
+					condicao=1;
+					System.out.println("1ok");
+				}
+			}
+			if (mes==2 ) {
+				if (dia<=29) {
+					condicao=1;
+					System.out.println("2ok");
+				}
+			}
+			System.out.println("\nDia invalido!!!");
+			System.out.println("\nDigite o Dia desejado:");
+			dia = teclado.nextInt();
+		}
+		
+
+	}
+
+}

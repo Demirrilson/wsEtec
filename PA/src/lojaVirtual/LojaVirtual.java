@@ -92,6 +92,7 @@ public class LojaVirtual {
 			
 		}
 		System.out.println("A região é: " + regiao);
+		leia.close();
 
 	}
 

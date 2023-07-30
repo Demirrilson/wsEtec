@@ -88,6 +88,7 @@ public class LojaVirtual2 {
 		System.out.println("O metodo de envio é: " + envio);
 		System.out.println("A região é: " + regiao);
 
+		leia.close();
 	}
 
 }

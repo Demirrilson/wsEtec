@@ -1,0 +1,25 @@
+package lojaDeTinta;
+
+import java.util.Scanner;
+
+public class LojaTinta {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double largura, altura;
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("====================");
+		System.out.println("     Loja de tintas");
+		
+		
+		
+		
+		
+		
+		teclado.close();
+
+	}
+
+}

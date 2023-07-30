@@ -1,0 +1,150 @@
+package lojaDeTinta;
+
+import java.util.Scanner;
+
+public class LojaTinta {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double largura, altura;
+		double area;
+		double quantTinta;
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("==========================");
+		System.out.println("     Loja de tintas");
+		System.out.println("==========================\n\n");
+		
+		System.out.println("Digite a largura da parede em metros:");
+		largura = teclado.nextDouble();
+		
+		System.out.println("Digite a altura da parede em metros:");
+		altura = teclado.nextDouble();
+		System.out.println("\n\n");
+		
+		area = altura*largura;
+		
+		quantTinta = rendimento(altura, largura);
+		
+		System.out.println("A quantidade de latas é: "+ valorLata(quantTinta));
+		
+		calculoDeLataGalao(quantTinta);
+		
+		
+		System.out.println("\n\n");
+		System.out.println("Area da parede: "+area+"M²");
+		System.out.println("\n\n");
+		
+		
+		
+		teclado.close();
+
+	}
+
+	
+	public static Double rendimento(double altura, double largura) {
+		double quantidadeTinta=0;
+		double area=0;
+		
+		area = altura * largura;
+		quantidadeTinta = (area *1.1)/6;
+		
+		return quantidadeTinta;
+			
+	}
+	
+	public static double valorLata (double quantTinta) {
+		double quantLata=0;
+		int lata=18;
+		double sobra=0;
+		
+		if (quantTinta>=lata) {
+					
+			quantLata = (int) (quantTinta / lata);
+			sobra = (quantTinta % (quantLata*lata));
+			
+			if (sobra>10.8) {
+				quantLata+=1;
+				sobra = (quantTinta % (quantLata*lata));
+			}
+		}
+		
+		return quantLata;
+	}
+	
+	
+
+	public static void calculoDeLataGalao(double quantTinta) {
+		int lata=18;
+		int quantLata=0;
+		double galao = 3.6;
+		int quantGalao =0;
+		double total=0;
+		double sobra=0;
+		double tintaSobra=0;
+		
+		
+		
+		if (quantTinta>=lata) {
+			
+			quantLata = (int) (quantTinta / lata);
+			sobra = (quantTinta % (quantLata*lata));
+			
+			if (sobra>10.8) {
+				quantLata+=1;
+				sobra = (quantTinta % (quantLata*lata));
+			}
+		}
+		
+		if (quantTinta<lata) {
+			sobra=quantTinta;
+		}
+		
+		if (sobra < galao) {
+			
+			quantGalao=1;
+		}
+		
+		if (sobra >= galao) {
+			
+			quantGalao = (int) (sobra/galao);
+
+			sobra = (sobra % (quantGalao*galao));
+			
+			if (sobra >0.00001) {
+				quantGalao+=1;
+			}
+			
+		}
+		
+		
+		total = (quantLata*lata)+(quantGalao*galao);
+		tintaSobra =(float)(total-quantTinta);
+		//System.out.println("A quantidade de latas é: "+quantLata);
+		System.out.println("A quantidade de galões é: "+quantGalao);
+		System.out.println("A quantidade de litros de tinta é: " +total+"L");
+		System.out.printf("A sobra de tinta será de aproximadamente:%.2fL", tintaSobra);
+	}
+
+
+
+	
+	/*public static void valorTinta(int quantLata, int quantGalao) {
+		double valorLata=80;
+		double valorGalao=25;
+		int qLata=0;
+		int qGalao=0;
+		double tVLata=0;
+		double tVGalao=0;
+		double valorTotal=0;
+		
+		qLata = quantLata;
+		
+		System.out.println(qLata);
+		
+		
+		
+	}*/
+
+}

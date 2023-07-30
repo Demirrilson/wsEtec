@@ -1,0 +1,86 @@
+package lojaDeTinta;
+
+import java.util.Scanner;
+
+public class LojaTinta {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double largura, altura;
+		
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("==========================");
+		System.out.println("     Loja de tintas");
+		System.out.println("==========================\n\n");
+		
+		System.out.println("Digite a largura da parede em metros:");
+		largura = teclado.nextDouble();
+		
+		System.out.println("Digite a altura da parede em metros:");
+		altura = teclado.nextDouble();
+		
+		double quantTinta = rendimento(altura, largura);
+		
+		calculoDeLataGalao(quantTinta);
+		System.out.println("--");
+		
+		teclado.close();
+
+	}
+
+	
+
+	public static void calculoDeLataGalao(double quantTinta) {
+		int lata=18;
+		int quantLata=0;
+		double galao = 3.6;
+		int quantGalao =0;
+		double total=0;
+		double sobra=0;
+		
+		
+		quantLata = (int) (quantTinta / lata);
+		sobra = (quantTinta % (quantLata*lata));
+		
+		if (sobra>10.8) {
+			quantLata+=1;
+		}
+		
+		if ((sobra >0)&& (sobra<=10.8)) {
+			System.out.println(sobra);
+			
+			quantGalao = (int) (sobra/galao);
+			
+			System.out.println(quantGalao);
+			
+			sobra = (float) (sobra % (quantGalao*galao));
+			System.out.println(sobra);
+			if (sobra >0) {
+				quantGalao+=1;
+			}
+		}
+		total = (quantLata*lata)+(quantGalao*galao);
+		
+		System.out.println("A quantidade de latas é: "+quantLata);
+		System.out.println("A quantidade de galões é: "+quantGalao);
+		System.out.println("A quantidade de litros de tinta é: " +total+"L");
+		
+		
+	}
+
+
+
+	public static Double rendimento(double altura, double largura) {
+		double quantidadeTinta=0;
+		double area=0;
+		
+		area = altura * largura;
+		quantidadeTinta = area *1.1;
+		
+		return quantidadeTinta;
+			
+	}
+
+}
